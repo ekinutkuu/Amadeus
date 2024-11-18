@@ -1,1 +1,112 @@
-/* Login.module.css */
+.container {
+   width: 100vw;
+   height: 100vh;
+   display: flex;
+   /* justify-content: center; */
+   align-items: center;
+   flex-direction: column;
+   background-image: url("../../assets/login_bg.png");
+   background-position: center;
+   background-size: cover;
+   background-repeat: no-repeat;
+}
+
+.amadeusLogo {
+   width: 75vw;
+   height: 40vh;
+   margin: 100px 20px 0px 20px;
+   background-image: url("../../assets/amadeus_logo.png");
+   background-position: center;
+   background-size: contain;
+   background-repeat: no-repeat;
+}
+
+.loginContainer {
+   max-width: 100%;
+   display: flex;
+   justify-content: center;
+   flex-direction: column;
+   margin: 100px;
+}
+
+.inputContainer {
+   display: flex;
+   /* justify-content: center; */
+   align-items: center;
+   margin: 10px;
+}
+
+.inputContainer label {
+   width: 100px;
+   margin-right: 20px;
+   text-align: end;
+   font-size: 16px;
+   font-weight: 450;
+   color: orange;
+   text-shadow: 0 0 5px orange, 0 0 10px orange, 0 0 15px #ffa500b3, 0 0 20px #ffa50066;
+}
+
+.inputContainer input {
+   height: 25px;
+   padding: 0 10px;
+   border-radius: 3px;
+   border: 1px solid #af854e;
+   color: orange;
+   background-color: black;
+}
+
+.inputContainer input:focus {
+   outline: none;
+   box-shadow: 0 0 10px 0 orange;
+}
+
+.inputContainer input::placeholder {
+   color: #8a5900;
+}
+
+.inputContainer button {
+   width: 23px;
+   height: 23px;
+   margin: 0 10px;
+   border-radius: 50%;
+   border: none;
+   background: linear-gradient(135deg, #ffcc80, #bd4504);
+   font-size: 16px;
+}
+
+.inputContainer button:hover {
+   cursor: pointer;
+   box-shadow: 0 0 10px 0 #c55518;
+}
+
+@media (max-width: 768px) {
+   .inputContainer input {
+      width: 140px;
+   }
+}
+
+@media (max-width: 350px) {
+   .amadeusLogo {
+      margin: 30px 20px 0 20px
+   }
+   
+   .loginContainer {
+      margin: 30px;
+   }
+
+   .inputContainer  {
+      flex-direction: column;
+   }
+
+   .inputContainer label {
+      width: 100%;
+      text-align: start;
+      margin: 10px 0;
+   }
+
+   .inputContainer button {
+      margin: 20px 0;
+      width: 40%;
+      border-radius: 5px;
+   }
+}
