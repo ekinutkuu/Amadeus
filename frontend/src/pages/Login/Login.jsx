@@ -1,13 +1,15 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import style from "./Login.module.css";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons'
 
 const Login = () => {
+   const navigate = useNavigate();
    const [apiKey, setApiKey] = useState('');
 
    const handleLogin = () => {
-      //navigate
+      navigate('/chat', { state: { apiKey } });
    };
 
    return (
